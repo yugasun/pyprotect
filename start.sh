@@ -1,3 +1,3 @@
 #!/bin/sh
 
-uvicorn --root-path=./dist app.main:app
+./dist/pyprotect_0.1.0

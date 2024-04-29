@@ -1,6 +1,6 @@
 ## Python Source Code Protection
 
-Use [pyarmor](https://github.com/dashingsoft/pyarmor) to protect your python source code.
+Use [pyinstaller](https://github.com/pyinstaller/pyinstaller) to protect your python source code.
 
 ### Environment
 
@@ -18,11 +18,13 @@ pip install -r requirements.txt
 ./dev.sh
 ```
 
-### Run obsfucate script
+### Run generate script
 
 ```bash
 ./gen.sh
 ```
+
+This command will generate a protected script in the `dist` directory.
 
 ### Run protected script
 

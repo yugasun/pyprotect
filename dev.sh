@@ -1,3 +1,3 @@
 #!/bin/sh
 
-uvicorn app.main:app --reload
+DEBUG=true python main.py
