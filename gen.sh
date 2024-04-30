@@ -2,18 +2,15 @@
 
 rm -rf ./dist
 
-# Application Filename for EXE
-name="pyprotect"
-version="0.1.0"
-FILENAME="${name}_${version}"
+# get --debug option
+if [ "$1" = "--debug" ]; then
+  DEBUG="--debug"
+else
+  DEBUG=""
+fi
 
 # Pyinstaller options
 PYINSTALLER="pyinstaller -y"
-CLEAN="--clean"
-MAIN_FILE="main.py"
-OUTPUT_NAME="--name ${FILENAME}"
-EXTRA_HOOKS="--additional-hooks-dir extra-hooks"
-ICON="--icon ico\example.ico"
-ONEFILE="--onefile"
+SPEC_FILE="pyprotect.spec"
 
-${PYINSTALLER} ${CLEAN} ${OUTPUT_NAME} ${ICON} ${EXTRA_HOOKS} ${MAIN_FILE} ${ONEFILE}
+${PYINSTALLER} ${SPEC_FILE} -- ${DEBUG}

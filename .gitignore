@@ -156,3 +156,5 @@ testing/
 # .python-version file
 .python-version
 # End of Poetry
+
+!pyprotect.spec
